@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class ProfileListAdapter extends ArrayAdapter<String>
+public class MainListAdapter extends ArrayAdapter<String>
 {
-	private final static String[] ENTRIES = new String[]{"Fruit", "Location", "Countries"};
+	private final static String[] ENTRIES = new String[]{"Distribution", "Events", "Mappings"};
 	
-	public ProfileListAdapter(Context context)
+	public MainListAdapter(Context context)
 	{
 		super(context, R.layout.list_item);
 		addAll(ENTRIES);
