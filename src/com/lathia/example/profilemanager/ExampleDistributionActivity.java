@@ -25,7 +25,7 @@ public class ExampleDistributionActivity extends DistributionActivity
 	@Override
 	protected String getDistributionVariableName()
 	{
-		return DataGenerator.FRUIT_DISTRIBUTION;
+		return DataGenerator.FRUITS;
 	}
 	
 	/*
