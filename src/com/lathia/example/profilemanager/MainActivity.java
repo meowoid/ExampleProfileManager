@@ -1,5 +1,8 @@
 package com.lathia.example.profilemanager;
 
+import com.lathia.example.profilemanager.distr.ExampleDistributionActivity;
+import com.lathia.example.profilemanager.util.DataGenerator;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;

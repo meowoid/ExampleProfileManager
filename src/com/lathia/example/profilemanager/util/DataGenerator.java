@@ -1,4 +1,4 @@
-package com.lathia.example.profilemanager;
+package com.lathia.example.profilemanager.util;
 
 import java.util.HashMap;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.lathia.example.profilemanager;
+package com.lathia.example.profilemanager.events;
 
 import android.view.View;
 import android.widget.ListView;
@@ -6,21 +6,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lathia.example.profilemanager.R;
+import com.lathia.example.profilemanager.util.DataGenerator;
 import com.ubhave.profilemanager.data.Distribution;
-import com.ubhave.profilemanager.ui.distribution.DistributionActivity;
-import com.ubhave.profilemanager.ui.distribution.DistributionListAdapter;
+import com.ubhave.profilemanager.ui.events.EventListActivity;
+import com.ubhave.profilemanager.ui.events.EventListAdapter;
 
-public class ExampleDistributionActivity extends DistributionActivity
+public class ExampleEventActivity extends EventListActivity
 {
 	/*
 	 * UI Content
 	 */
-
-	@Override
-	protected String getDistributionTitle()
-	{
-		return "Fruits";
-	}
 
 	@Override
 	protected String getDistributionVariableName()
@@ -52,9 +48,9 @@ public class ExampleDistributionActivity extends DistributionActivity
 	 */
 
 	@Override
-	protected DistributionListAdapter getAdapter(final Distribution distribution)
+	protected EventListAdapter getAdapter(final Distribution distribution)
 	{
-		return new ExampleDistributionAdapter(this, distribution);
+		return new ExampleEventAdapter(this, distribution);
 	}
 	
 	/*
@@ -68,12 +64,6 @@ public class ExampleDistributionActivity extends DistributionActivity
 	}
 
 	@Override
-	protected TextView getScreenTitle()
-	{
-		return (TextView) findViewById(R.id.screen_title);
-	}
-
-	@Override
 	protected ListView getListView()
 	{
 		return (ListView) findViewById(R.id.listView);
@@ -83,5 +73,17 @@ public class ExampleDistributionActivity extends DistributionActivity
 	protected ProgressBar getLoadingProgressBar()
 	{
 		return (ProgressBar) findViewById(R.id.loading_progress);
+	}
+
+	@Override
+	protected TextView getScreenTitleView()
+	{
+		return (TextView) findViewById(R.id.screen_title);
+	}
+
+	@Override
+	protected String getScreenTitleValue()
+	{
+		return "Fruits";
 	}
 }

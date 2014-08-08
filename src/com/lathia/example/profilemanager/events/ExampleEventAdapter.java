@@ -3,20 +3,21 @@
  Neal Lathia, neal.lathia@cl.cam.ac.uk
  ************************************************** */
 
-package com.lathia.example.profilemanager;
+package com.lathia.example.profilemanager.events;
 
 import android.content.Context;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.lathia.example.profilemanager.R;
 import com.ubhave.profilemanager.data.Distribution;
-import com.ubhave.profilemanager.ui.distribution.DistributionListAdapter;
+import com.ubhave.profilemanager.ui.events.EventListAdapter;
 
-public class ExampleDistributionAdapter extends DistributionListAdapter
+public class ExampleEventAdapter extends EventListAdapter
 {
 
-	public ExampleDistributionAdapter(Context context, Distribution data)
+	public ExampleEventAdapter(Context context, Distribution data)
 	{
 		super(context, data, R.layout.list_item_distribution);
 	}
